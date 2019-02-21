@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         DList n = new DList();
-        
+
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
             String s= sc.nextLine();
@@ -14,7 +14,10 @@ public class Main {
             n.Insertar(s);
         }
 n.printlist(n.head);
-
+n.PlayNow(n.head);
+n.PlayNext(n.head);
+n.PlayPrevious(n.head);
+n.PlayPrevious(n.head);
 
 
     }

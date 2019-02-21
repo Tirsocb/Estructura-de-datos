@@ -1,8 +1,10 @@
 package com.company;
 
 
+
 public class DList {
     Node head;
+    Node tail;
 
     class Node {
         String datos;
@@ -31,14 +33,38 @@ public class DList {
 
     public void printlist(Node node)
     {
-        Node last = null;
+
 
         while (node != null) {
             System.out.print(node.datos + " ");
-            last = node;
+
             node = node.next;
         }
         System.out.println();
 
     }
+
+    public void PlayNow(Node node){
+        System.out.println("Playing current song: " + node.datos);
+
+    }
+
+    public void PlayNext(Node node){
+        node = node.next;
+        System.out.println("Playing next song:" + node.datos);
+        head = node.next;
+
+
+
+
+    }
+
+    public void PlayPrevious(Node node) {
+        head = node.prev;
+        node= node.prev;
+        System.out.println("Playing previous song: "+ node.datos);
+
+
+        }
+
 }
